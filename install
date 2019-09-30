@@ -1,0 +1,36 @@
+clear
+echo "Para instala as dependecias, primeiro abra o arquivo sources.list com
+o comando nano /etc/apt/sources.list e cole os repositorio dentro e salve
+deb http://http.kali.org/kali kali-rolling main non-free contrib
+
+deb http://old.kali.org/kali sana main non-free contrib
+deb http://http.kali.org/kali kali-rolling main contrib non-free
+deb http://old.kali.org/kali moto main non-free contrib"
+echo
+echo "Se voce já coloco os repositorio na source.list entao digite [s] para sim
+ou [n] não para sair"
+read r
+if [ "$r" = "s" ]
+then
+    echo
+    echo "O INSTALADOR VAI INSTALA TODAS AS DEPENDENCIA NECESSARIA PARA O SCHRIP"
+    echo "      FUCIONAR CORRETAMENTE SE NÃO O KHLS NAO IRA FUCIONA OK"
+    echo
+    echo "################################################################"
+    echo "#### agurde uns estantis estamos instalando o KHLS para você ###"
+    echo "################################################################"
+    echo
+
+    apt-get autoremove && apt-get install -f && apt-get autoclean
+    apt-get install aircrack-ng reaver python3.7 metasploit-framework figlet
+    cd ..
+    cp -r KHLS-1.0 -t /usr/bin/
+    cd /usr/bin/
+    cd KHLS-1.0
+    chmod 777 *
+    cp khls /usr/bin/
+    khls
+else
+    clear
+
+fi
