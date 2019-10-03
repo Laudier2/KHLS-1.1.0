@@ -3,13 +3,13 @@
 
 import MSFV
 import WIFI
-import os
+from os import system
 
 rl = 'N'
 while rl == 'N':
-    os.system('\033[32m\033[1m')
-    os.system('clear')
-    os.system('figlet @@@ KHLS @@@')
+    system('\033[32m\033[1m')
+    system('clear')
+    system('figlet @@@ KHLS @@@')
     print('''$______________________\033[34mVERSÃO 1.0 ANO DE LANÇAMENTO 2019\033[0;0m\033[32m\033[1m___________________$\033[0;0m''')
     print('¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨')
     d = int(input( '''\033[32m\033[1mESCOLHA UMA OPÇÃO ABAIXO!\033[0;0m
@@ -29,4 +29,5 @@ while rl == 'N':
         print('==================== VOCÊ ESCOLHEU \033[31mSAIR\033[0;0m DO PROGRAMA ======================\n')
 
     rl = str(input('\033[33mVocê quer mesmo sair do programa\033[0;0m S/N: ')).upper()
-    print('\n$$$$$$$$$$$$$$$$$ \033[33mObrigado pela visita, volte sempre\033[0;0m $$$$$$$$$$$$$$$$$$$$$\n')
+    system('clear')
+    print('\n$$$$$$$$$$$$$$$$$ \033[33m= Obrigado pela visita =\033[0;0m $$$$$$$$$$$$$$$$$$$$$\n')

