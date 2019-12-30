@@ -12,13 +12,13 @@ figlet
 
 Para garantir que os repositórios estejam na sua sourcelist.list! Logo abaixo tem instrução de como você pode tá! Fazendo isso OK. Isso funcionara no kali linux. Abra o terminal e digite:  nano etc/apt/sourcelist.list     Agora vai abrir um arquivo parecido com esse abaixo. 
 
-#      
+#   
 
-# deb cdrom:[Debian GNU/Linux 2019.3 _Kali-rolling_ - Official Snapshot amd64 LIVE/INSTALL Binary 20190827-12:55]/ kali-last-snapshot contrib main non-free     #deb cdrom:[Debian GNU/Linux 2019.3 _Kali-rolling_ - Oficial Snapshot amd64 LIVE/INSTALL Binary 20190827-12:55]/ kali-last-snapshot contrib main non-free     
+#deb cdrom:[Debian GNU/Linux 2019.3 _Kali-rolling_ - Official Snapshot amd64 LIVE/INSTALL Binary 20190827-12:55]/ kali-last-snapshot contrib main non-free     #deb cdrom:[Debian GNU/Linux 2019.3 _Kali-rolling_ - Oficial Snapshot amd64 LIVE/INSTALL Binary 20190827-12:55]/ kali-last-snapshot contrib main non-free     
 
 deb http://http.kali.org/kali kali-rolling main non-free contrib     
 
-# This system was installed using small removable media # (e.g. netinst, live or single CD). The matching "deb cdrom" # entries were disabled at the end of the installation process. # For information about how to configure apt package sources, # see the sources.list(5) manual.   
+#This system was installed using small removable media # (e.g. netinst, live or single CD). The matching "deb cdrom" # entries were disabled at the end of the installation process. # For information about how to configure apt package sources, # see the sources.list(5) manual.   
 
 Agora cole essas linhas de repositório logo abaixo de deb http://http.kali.org/kali kali-rolling main non-free contrib, e ezeculte o instalador dentro da pasta que você extraiu do arquivo zipado KHLS-1.0-data-28-09-2019.zip que é o KHLS-1.0     
 
