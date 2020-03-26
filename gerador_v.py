@@ -21,7 +21,7 @@ while permite == 'N':
     if impute1 == 1:
         MSFV.Payload_Msfvenon()
 
-    elif imput1 == 2:
+    elif impute1 == 2:
         WIFI.Hacker_wireless()
 
     else:
@@ -31,4 +31,3 @@ while permite == 'N':
     permite = str(input('\033[33mVocê quer mesmo sair do programa\033[0;0m S/N: ')).upper()
     system('clear')
     print('\n$$$$$$$$$$$$$$$$$ \033[33m= Obrigado pela visita =\033[0;0m $$$$$$$$$$$$$$$$$$$$$\n')
-    
